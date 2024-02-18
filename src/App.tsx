@@ -1,9 +1,16 @@
+import Loading from "./components/loading/Loading"
+import Intro from "./pages/intro/Intro"
 
 
 function App() {
   return (
     <>
-      new world 
+      {/* {width < 900 ? (
+       <Intro />
+      ) : (
+        <Loading />
+      )} */}
+        <Loading />
     </>
   )
 }
