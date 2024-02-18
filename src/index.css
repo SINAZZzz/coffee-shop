@@ -1,3 +1,9 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
 @font-face {
   font-family: sora;
   src: url(./assets/Font/Sora-Regular.ttf);
