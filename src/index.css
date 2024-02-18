@@ -1,0 +1,8 @@
+@font-face {
+  font-family: sora;
+  src: url(./assets/Font/Sora-Regular.ttf);
+}
+
+body {
+  font-family: sora;
+}
