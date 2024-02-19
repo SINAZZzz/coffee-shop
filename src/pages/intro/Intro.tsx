@@ -1,5 +1,8 @@
 import { Box } from "@mui/material";
 import Background from "./components/Background";
+import Title from "./components/Title";
+import Description from "./components/Description";
+import GetStartBtn from "./components/GetStartBtn";
 
 export default function Intro() {
   return (
@@ -8,27 +11,11 @@ export default function Intro() {
       {/* background */}
       <Background />
       {/* Title */}
-      <Box
-        component='div'
-        sx={{
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center',
-        }}
-      >
-        <Box
-          color="white"
-          fontSize={37}
-          fontWeight='600'
-          mx='2rem'
-          lineHeight='1.2'
-        >
-          Coffee so good, your taste buds will love it.
-        </Box>
-      </Box>
+      <Title />
+      {/* Description */}
+      <Description />
+      {/* Get start */}
+      <GetStartBtn />
     </Box>
     </>
   )
