@@ -2,17 +2,7 @@ import { Box } from "@mui/material";
 
 export default function Description() {
   return (
-    <Box
-    component='div'
-    sx={{
-      width: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      textAlign: 'center',
-    }}
-  >
+    <Box component='div' sx={{textAlign: 'center'}}>
     <Box
       color="#A9A9A9"
       fontSize={15}
