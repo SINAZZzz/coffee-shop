@@ -12,3 +12,7 @@
 body {
   font-family: sora;
 }
+
+.categories-div ::-webkit-scrollbar{
+  width: 0;
+}

@@ -1,4 +1,4 @@
-import { Box, Grid, IconButton, Typography } from '@mui/material'
+import { Avatar, Box, Grid, IconButton, Typography } from '@mui/material'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 export default function Profile() {
@@ -16,8 +16,11 @@ export default function Profile() {
         </Grid>
         {/* profile */}
         <Grid item xs={2}>
+        <Avatar sx={{backgroundColor:'transparent'}} variant="rounded">
             <Box component="img" src="https://s6.uupload.ir/files/user_0ek2.jpg"
-            sx={{width:'3rem' , borderRadius:'10px'}} />
+                sx={{width:'3rem' , borderRadius:'10px'}} />
+        </Avatar>
+            
         </Grid>
     </Grid>
   )
