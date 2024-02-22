@@ -2,6 +2,7 @@ import { Box, Container} from "@mui/material";
 import Profile from "./components/Profile";
 import Search from "./components/Search";
 import Categories from "./components/Categories";
+import Banner from "./components/Banner";
 
 
 
@@ -20,11 +21,8 @@ export default function Home() {
                 </Container>
             </Box>
             <Container sx={{bgcolor:'#F8F6F6', height:'100vh'}}>
-                {/* banner */}
-                <Box component='img' src="https://s8.uupload.ir/files/frame_17_ycs.png" 
-                sx={{width:'100%' , mt:'70%' , position:'relative'}}  zIndex='1' />
-                {/* categories */}
-                     <Categories />
+                <Banner />
+                <Categories />
             </Container>
         </Box>
     </>
