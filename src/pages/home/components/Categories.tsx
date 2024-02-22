@@ -1,11 +1,16 @@
 import { Box, Chip } from '@mui/material'
-import { useState } from 'react'
-import { handleChipClick } from '../../../functions/handleChipClick';
+import { useState } from 'react';
 const categories = ['Cappuccino', 'Machiato', 'Latte', 'Category 4', 'Category 5'];
 
-export default function Categories() {
 
-  
+
+export default function Categories() {
+  const [selectedChip, setSelectedChip] = useState<number | undefined>();
+
+  const handleChipClick = (index: number) => {
+    setSelectedChip(index);
+  };
+
   return (
     <Box sx={{width:'100%' , overflowX:'auto' , whiteSpace:'nowrap' , scrollbarWidth:'none'}} className='categories-div'>
         {categories.map((category, index) => (

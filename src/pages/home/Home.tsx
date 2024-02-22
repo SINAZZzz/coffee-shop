@@ -1,7 +1,7 @@
-import { Box, Chip, Container} from "@mui/material";
+import { Box, Container} from "@mui/material";
 import Profile from "./components/Profile";
 import Search from "./components/Search";
-import { useState } from "react";
+import Categories from "./components/Categories";
 
 
 
@@ -24,7 +24,7 @@ export default function Home() {
                 <Box component='img' src="https://s8.uupload.ir/files/frame_17_ycs.png" 
                 sx={{width:'100%' , mt:'70%' , position:'relative'}}  zIndex='1' />
                 {/* categories */}
-                     
+                     <Categories />
             </Container>
         </Box>
     </>
