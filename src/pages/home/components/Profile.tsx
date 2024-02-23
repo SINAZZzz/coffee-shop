@@ -3,7 +3,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 export default function Profile() {
   return (
-    <Grid container spacing={2} display='flex' justifyContent='center'      justifyItems='center' alignContent='center' alignItems='center' mb='2rem' mt='3rem'>
+    <Grid container spacing={2} display='flex' justifyContent='center' justifyItems='center' alignContent='center' alignItems='center' mb='2rem' mt='3rem'>
         <Grid item xs={10}>
             {/* Location */}
             <Typography color='#B7B7B7'>Location</Typography>
