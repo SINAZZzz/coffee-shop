@@ -59,7 +59,7 @@ export default function Home() {
           <Grid item key={product.id} xs={6} sm={6} md={6} lg={6}>
             <Card sx={{ width: '100%', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
               {/* img */}
-              <Box sx={{ width: '100%', my: '0.6rem' }} component='img' src={product.image} />
+              <Box sx={{ width: '94%', m:'0.3rem'}} component='img' src={product.image} />
               <Box mx='1rem'>
                 {/* title */}
                 <Typography fontSize='1.2rem' fontWeight='bold'>{product.title}</Typography>
