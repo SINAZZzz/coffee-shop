@@ -4,14 +4,9 @@ import Search from "./components/Search";
 import Categories from "./components/Categories";
 import Banner from "./components/Banner";
 import AddIcon from '@mui/icons-material/Add';
+import { Product } from "../../interfaces/Product";
 
-interface Product {
-    id: number;
-    title: string;
-    description: string;
-    price: number;
-    image: string;
-  }
+
 
 const products: Product[] = [
     {
@@ -42,7 +37,6 @@ const products: Product[] = [
         price: 3.99,
         image: "https://s8.uupload.ir/files/rectangle_1706_i5d1.png"
       },
-    // Add more products as needed
   ];
 
 export default function Home() {
@@ -60,7 +54,7 @@ export default function Home() {
             <Container sx={{bgcolor:'#F8F6F6', height:'100vh'}}>
                 <Banner />
                 <Categories />
-      <Grid container spacing={2}>
+      <Grid container spacing={2} position='relative' zIndex='1'>
         {products.map((product) => (
           <Grid item key={product.id} xs={6} sm={6} md={6} lg={6}>
             <Card sx={{ width: '100%', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>

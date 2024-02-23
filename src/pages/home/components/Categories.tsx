@@ -12,7 +12,7 @@ export default function Categories() {
   };
 
   return (
-    <Box sx={{width:'100%' , overflowX:'auto' , whiteSpace:'nowrap' , scrollbarWidth:'none'}} className='categories-div'>
+    <Box sx={{width:'100%' , overflowX:'auto' , whiteSpace:'nowrap' , scrollbarWidth:'none'}}>
         {categories.map((category, index) => (
                 <Chip
                 key={index}
