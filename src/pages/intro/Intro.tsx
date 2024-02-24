@@ -8,13 +8,9 @@ export default function Intro() {
   return (
     <>
     <Box bgcolor='black' width='100%' height='100vh'>
-      {/* background */}
       <Background />
-      {/* Title */}
       <Title />
-      {/* Description */}
       <Description />
-      {/* Get start */}
       <GetStartBtn />
     </Box>
     </>
