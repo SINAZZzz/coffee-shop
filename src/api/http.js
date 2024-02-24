@@ -1,7 +1,6 @@
 import axios from "axios";
-import process from "process";
 
-axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+axios.defaults.baseURL = "http://localhost:5015/";
 
 export function get(url, config = {}) {
   return axios
