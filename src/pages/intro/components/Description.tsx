@@ -1,6 +1,9 @@
 import { Box } from "@mui/material";
+import { AppContext } from "../../../context/AppContext";
+import { useContext } from "react";
 
 export default function Description() {
+  const {dataIntro} = useContext(AppContext)
   return (
     <Box component='div' sx={{textAlign: 'center'}}>
     <Box
@@ -13,7 +16,7 @@ export default function Description() {
       lineHeight='1.2'
       overflow='hidden'
     >
-      The best grain, the finest roast, the powerful flavor.
+      {dataIntro && dataIntro.description}
     </Box>
   </Box>
   )

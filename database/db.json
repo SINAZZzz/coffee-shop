@@ -1,13 +1,33 @@
 {
-    "posts": [
-      { "id": "1", "title": "a title", "views": 100 },
-      { "id": "2", "title": "another title", "views": 200 }
-    ],
-    "comments": [
-      { "id": "1", "text": "a comment about post 1", "postId": "1" },
-      { "id": "2", "text": "another comment about post 1", "postId": "1" }
-    ],
-    "profile": {
-      "name": "typicode"
+  "intro": [
+    { 
+      "id": "1",
+      "title": "Coffee so good, your taste buds will love it.",
+      "description":"The best grain, the finest roast, the powerful flavor."
     }
-  }
+  ],
+  "categories":["Cappuccino", "Machiato", "Latte", "Cappuccino", "Machiato" , "Latte" , "Latte"],
+  "products":[
+    {
+      "id":"1",
+      "title":"Cappucino",
+      "description":"with Chocolate",
+      "price":2.23,
+      "image": "https://s8.uupload.ir/files/rectangle_1706_i5d1.png"
+    },
+    {
+      "id":"1",
+      "title":"Cappucino",
+      "description":"with Chocolate",
+      "price":2.23,
+      "image": "https://s8.uupload.ir/files/rectangle_1706_i5d1.png"
+    },
+    {
+      "id":"1",
+      "title":"Cappucino",
+      "description":"with Chocolate",
+      "price":2.23,
+      "image": "https://s8.uupload.ir/files/rectangle_1706_i5d1.png"
+    }
+  ]
+}

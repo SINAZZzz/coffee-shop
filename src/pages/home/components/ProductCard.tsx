@@ -1,39 +1,17 @@
 import { Box, Card, Grid, Typography } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
-import { Product } from "../../../interfaces/Product";
+// import { Product } from "../../../interfaces/Product";
+import { useContext } from "react";
+import { AppContext } from "../../../context/AppContext";
 
-const products: Product[] = [
-    {
-      id: 1,
-      title: "Cappucino",
-      description: "with Chocolate",
-      price: 4.53,
-      image: "https://s8.uupload.ir/files/rectangle_1706_i5d1.png"
-    },
-    {
-      id: 2,
-      title: "Espresso",
-      description: "Strong and Dark",
-      price: 3.99,
-      image: "https://s8.uupload.ir/files/rectangle_1706_i5d1.png"
-    },
-    {
-        id: 2,
-        title: "Espresso",
-        description: "Strong and Dark",
-        price: 3.99,
-        image: "https://s8.uupload.ir/files/rectangle_1706_i5d1.png"
-      },
-      {
-        id: 2,
-        title: "Espresso",
-        description: "Strong and Dark",
-        price: 3.99,
-        image: "https://s8.uupload.ir/files/rectangle_1706_i5d1.png"
-      },
-  ];
 
 export default function ProductCard() {
+  const { products} = useContext(AppContext)
+  
+  if (!products) {
+    return null; 
+  }
+  
   return (
     <Grid container spacing={2} position='relative' zIndex='1'>
         {products.map((product) => (

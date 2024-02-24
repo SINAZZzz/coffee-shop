@@ -17,7 +17,7 @@ export default function Home() {
           <Box position='relative' zIndex='1'>
             <Container>
               <Profile />
-              <Search />   
+              <Search />    
               <Banner />
               <Categories />
               <ProductCard />

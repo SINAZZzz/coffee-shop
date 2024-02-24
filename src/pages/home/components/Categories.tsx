@@ -1,16 +1,21 @@
 import { Box, Chip } from '@mui/material'
-import { useState } from 'react';
-const categories = ['Cappuccino', 'Machiato', 'Latte', 'Category 4', 'Category 5'];
+import { useContext, useState } from 'react';
+import { AppContext } from '../../../context/AppContext';
 
 
 
 export default function Categories() {
   const [selectedChip, setSelectedChip] = useState<number | undefined>();
+  const {categories} = useContext(AppContext)
+
+    if (!categories) {
+      return null; 
+    }
 
   const handleChipClick = (index: number) => {
     setSelectedChip(index);
   };
-
+ 
   return (
     <Box sx={{width:'100%' , overflowX:'auto' , whiteSpace:'nowrap' , scrollbarWidth:'none'}}>
         {categories.map((category, index) => (

@@ -1,6 +1,9 @@
 import { Box } from '@mui/material';
+import { useContext } from 'react';
+import { AppContext } from '../../../context/AppContext';
 
 export default function Title() {
+  const {dataIntro} = useContext(AppContext)
   return (
     <Box component='div' sx={{textAlign: 'center'}}>
         <Box
@@ -12,8 +15,8 @@ export default function Title() {
           lineHeight='1.2'
           overflow='hidden'
         >
-          Coffee so good, your taste buds will love it.
+          {dataIntro && dataIntro.title}
         </Box>
-      </Box>
+      </Box> 
   )
 }
