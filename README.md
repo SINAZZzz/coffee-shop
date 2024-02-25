@@ -24,4 +24,4 @@ https://www.figma.com/file/gs7MYXAQcNAfYW7xyoXcIV/Coffee-Shop-Mobile-App-Design-
 
 npm run dev
 
-npm run json-server
+json-server --watch db.json

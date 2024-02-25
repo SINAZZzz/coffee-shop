@@ -15,7 +15,7 @@ export default function Home() {
         <Box position='absolute' zIndex='-1' width='100%' height='100%'>
           <Background />
         </Box>
-        <Box position='relative' zIndex='1' mb="4rem">
+        <Box position='relative' zIndex='1' mb="6rem">
           <Container>
             <Profile />
             <Search />    
