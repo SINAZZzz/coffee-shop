@@ -6,7 +6,6 @@
       "description":"The best grain, the finest roast, the powerful flavor."
     }
   ],
-  "categories":["Cappuccino", "Machiato", "Latte", "Cappuccino", "Machiato" , "Latte" , "Latte"],
   "products":[
     {
       "id":"1",
@@ -16,18 +15,27 @@
       "image": "https://s8.uupload.ir/files/rectangle_1706_i5d1.png"
     },
     {
-      "id":"1",
-      "title":"Cappucino",
+      "id":"2",
+      "title":"Machiato",
       "description":"with Chocolate",
       "price":2.23,
       "image": "https://s8.uupload.ir/files/rectangle_1706_i5d1.png"
     },
     {
-      "id":"1",
-      "title":"Cappucino",
+      "id":"3",
+      "title":"Latte",
+      "description":"with Chocolate",
+      "price":2.23,
+      "image": "https://s8.uupload.ir/files/rectangle_1706_i5d1.png"
+    },
+    {
+      "id":"4",
+      "title":"Tea",
       "description":"with Chocolate",
       "price":2.23,
       "image": "https://s8.uupload.ir/files/rectangle_1706_i5d1.png"
     }
-  ]
+  ],
+  "categories":["Cappuccino", "Machiato", "Latte", "Cappuccino", "Machiato" , "Latte" , "Latte"]
 }
+
