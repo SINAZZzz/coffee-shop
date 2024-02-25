@@ -6,7 +6,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import { useState } from 'react';
 
 export default function BtnNavigation() {
-    const [selected, setSelected] = useState<number | undefined>();
+    const [selected, setSelected] = useState<number | undefined>(0);
     
     const handleChipClick = (index: number) => {
         setSelected(index);
