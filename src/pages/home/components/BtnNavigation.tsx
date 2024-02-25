@@ -52,11 +52,11 @@ export default function BtnNavigation() {
                     width: "15px",
                     height: "9px",
                     borderRadius: "20px",
-                    backgroundColor: selected === index ? "#C67C4E" : "transparent",
+                    background: selected === index ? "linear-gradient(to left bottom, #C67C4E, #EDAB81)" : "transparent",
                     zIndex: 3
                   }}
                 />
-              ))}
+              ))} 
           </BottomNavigation>
   )
 }
