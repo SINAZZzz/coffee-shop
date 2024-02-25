@@ -1,6 +1,5 @@
 import { Box, Card, Grid, Typography } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
-// import { Product } from "../../../interfaces/Product";
 import { useContext } from "react";
 import { AppContext } from "../../../context/AppContext";
 

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:5015/";
+axios.defaults.baseURL = "http://localhost:3000/";
 
 export function get(url, config = {}) {
   return axios
