@@ -1,7 +1,5 @@
 # Coffee Shop
 
-<h1> Construction tools </h1>
-
 <b>
 React + Vite + Ts + Mui 
 </b>
