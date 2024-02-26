@@ -1,7 +1,7 @@
 import { Box, Container} from "@mui/material";
 import BtnNavigation from './components/BtnNavigation';
 import Profile from './components/Profile';
-import Search from './components/Search';
+import Search from './components/search/Search';
 import Banner from './components/Banner';
 import Categories from './components/Categories';
 import ProductCard from './components/productCard/ProductCard';

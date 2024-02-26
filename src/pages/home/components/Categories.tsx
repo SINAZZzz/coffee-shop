@@ -9,11 +9,11 @@ export default function Categories() {
 
     if (!categories) {
       return null; 
-    }
+    } 
 
   const handleChipClick = (index: number) => {
     setSelectedChip(index);
-  };
+  }; 
  
   return (
     <Box sx={{width:'100%' , overflowX:'auto' , whiteSpace:'nowrap' , scrollbarWidth:'none'}}>
