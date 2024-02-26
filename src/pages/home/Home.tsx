@@ -4,7 +4,7 @@ import Profile from './components/Profile';
 import Search from './components/Search';
 import Banner from './components/Banner';
 import Categories from './components/Categories';
-import ProductCard from './components/ProductCard';
+import ProductCard from './components/productCard/ProductCard';
 import Background from './components/Background';
 
 export default function Home() {
