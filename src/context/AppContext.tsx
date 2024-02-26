@@ -9,10 +9,13 @@ export const AppContext = createContext<AppContextType>({
   categories:'',
   setCategories: () => {} ,
   products: '',
-  setProducts: () => {}
+  setProducts: () => {},
+  selectedChip: 0,
+  setSelectedChip: () => {} ,
 });
 
 const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => {
+  const [selectedChip, setSelectedChip] = useState<number | undefined>();
   const [dataIntro, setDataIntro] = useState<string>();
   const [categories, setCategories] = useState<string>();
   const [products, setProducts] = useState<string>();
@@ -42,7 +45,9 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => 
         categories:categories,
         setCategories,
         products:products,
-        setProducts
+        setProducts,
+        selectedChip:selectedChip,
+        setSelectedChip
       }}
     >
       {children}

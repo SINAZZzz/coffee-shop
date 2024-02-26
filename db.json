@@ -9,7 +9,7 @@
   "products":[
     {
       "id":"1",
-      "title":"Cappucino",
+      "title":"Cappuccino",
       "description":"with Chocolate",
       "price":2.23,
       "image": "https://s8.uupload.ir/files/rectangle_1706_i5d1.png",
@@ -40,6 +40,6 @@
       "rank": 5
     }
   ],
-  "categories":["Cappuccino", "Machiato", "Latte", "Cappuccino", "Machiato" , "Latte" , "Latte"]
+  "categories":["Cappuccino", "Machiato", "Latte", "Tea", "Machiato" , "Latte" , "Latte"]
 }
 

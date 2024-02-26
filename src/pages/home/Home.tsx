@@ -1,17 +1,15 @@
 import { Box, Container} from "@mui/material";
-import Profile from "./components/Profile";
-import Search from "./components/Search";
-import Categories from "./components/Categories";
-import Banner from "./components/Banner";
-import ProductCard from "./components/ProductCard";
-import Background from "./components/Background";
-import BtnNavigation from "./components/BtnNavigation";
-
+import BtnNavigation from './components/BtnNavigation';
+import Profile from './components/Profile';
+import Search from './components/Search';
+import Banner from './components/Banner';
+import Categories from './components/Categories';
+import ProductCard from './components/ProductCard';
+import Background from './components/Background';
 
 export default function Home() {
   return (
     <>
-      <Box position='relative'>
         <Box position='absolute' zIndex='-1' width='100%' height='100%'>
           <Background />
         </Box>
@@ -27,7 +25,6 @@ export default function Home() {
         <Box position='relative' zIndex='2'>
           <BtnNavigation />
         </Box>
-      </Box>
     </>
   )
 }

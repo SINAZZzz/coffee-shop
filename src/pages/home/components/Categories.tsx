@@ -1,12 +1,11 @@
 import { Box, Chip } from '@mui/material'
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../../../context/AppContext';
 
 
 
 export default function Categories() {
-  const [selectedChip, setSelectedChip] = useState<number | undefined>();
-  const {categories} = useContext(AppContext)
+  const {selectedChip , setSelectedChip , categories} = useContext(AppContext)
 
     if (!categories) {
       return null; 
