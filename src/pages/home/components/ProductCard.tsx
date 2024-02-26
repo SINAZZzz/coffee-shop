@@ -17,6 +17,10 @@ export default function ProductCard() {
         <Grid item key={product.id} xs={6} sm={6} md={6} lg={6}>
             <Card sx={{ width: '100%', display: 'flex', flexDirection: 'column', borderRadius: '20px' , my:'0.5rem' }}>
                 {/* img */}
+                <Box bgcolor='rgba(0,0,30,0.4)' color='white'sx={{backdropFilter:'blur(3px)'}} mt='0.3rem' ml='0.3rem' display='flex' width='4rem'justifyContent='center' borderRadius='20px 0px 20px 0px' alignItems='center' height='2rem' position='absolute'>
+                    <Box component='img'  src="https://s8.uupload.ir/files/furnitur-icon_bg1w.png" width='0.8rem' mr='5px' />
+                    <Box component='p' fontSize='12px' fontWeight='bold'>{product.rank}</Box>
+                </Box>
                 <Box sx={{ width: '94%', m:'0.3rem'}} component='img' src={product.image} />
                 <Box mx='1rem'>
                     {/* title */}
