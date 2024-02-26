@@ -1,4 +1,4 @@
-import { Box, Card, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import { useContext } from "react";
 import { AppContext } from "../../../../context/AppContext";
 import { Product } from "../../../../interfaces/Product";
