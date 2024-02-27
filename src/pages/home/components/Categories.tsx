@@ -6,7 +6,7 @@ import { AppContextType } from '../../../interfaces/AppContextType';
 export default function Categories() {
   const { selectedChip, setSelectedChip, categories } = useContext<AppContextType>(AppContext);
 
-  if (!categories) {
+  if (!categories || !Array.isArray(categories)) {
     return null;
   }
 

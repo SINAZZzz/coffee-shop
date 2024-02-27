@@ -1,7 +1,9 @@
 import { Typography } from "@mui/material";
-import { CardProductProps } from "../../../../../../types/CardProductProps";
+import { TitleType } from '../../../../../../types/TitleType';
 
-export default function Title({title} : CardProductProps) {
+
+
+export default function Title({title} : TitleType) {
   return (
     <Typography fontSize='1.2rem' fontWeight='bold'>{title}</Typography>
   )
