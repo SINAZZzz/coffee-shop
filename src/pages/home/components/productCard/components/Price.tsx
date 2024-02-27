@@ -1,7 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
+import { CardProductProps } from "../../../../../../types/CardProductProps";
 
-export default function Price({price}) {
+export default function Price({price} : CardProductProps) {
   return (
     <Box display='flex' justifyContent='space-between' alignItems='center' my='1rem'>
         <Typography fontWeight='bold' fontSize='1.5rem'>$ {price.toFixed(2)}</Typography>
