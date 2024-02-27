@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import { AppContextProviderProps } from "../interfaces/AppContextProviderProps";
 import { AppContextType } from "../interfaces/AppContextType";
-import { get } from '../api';
+import { get } from "../api/http";
 
 export const AppContext = createContext<AppContextType>({
   dataIntro: '',
@@ -23,9 +23,9 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const introData = await get('intro');
-        const categoriesData = await get('categories');
-        const productsData = await get('products');
+        const introData:string = await get('intro');
+        const categoriesData:string = await get('categories');
+        const productsData:string = await get('products');
         setDataIntro(introData[0]);
         setCategories(categoriesData)
         setProducts(productsData)
