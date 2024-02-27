@@ -1,45 +1,49 @@
 {
   "intro": [
-    { 
+    {
       "id": "1",
       "title": "Coffee so good, your taste buds will love it.",
-      "description":"The best grain, the finest roast, the powerful flavor."
+      "description": "The best grain, the finest roast, the powerful flavor."
     }
   ],
-  "products":[
+  "products": [
     {
-      "id":"1",
-      "title":"Cappuccino",
-      "description":"with Chocolate",
-      "price":2.23,
+      "id": "1",
+      "title": "Cappuccino",
+      "description": "with Chocolate",
+      "price": 2.23,
       "image": "https://s8.uupload.ir/files/rectangle_1706_i5d1.png",
       "rank": 2.3
     },
     {
-      "id":"2",
-      "title":"Machiato",
-      "description":"with Chocolate",
-      "price":2.23,
+      "id": "2",
+      "title": "Machiato",
+      "description": "with Chocolate",
+      "price": 2.23,
       "image": "https://s8.uupload.ir/files/rectangle_1706_i5d1.png",
       "rank": 2.4
     },
     {
-      "id":"3",
-      "title":"Latte",
-      "description":"with Chocolate",
-      "price":2.23,
+      "id": "3",
+      "title": "Latte",
+      "description": "with Chocolate",
+      "price": 2.23,
       "image": "https://s8.uupload.ir/files/rectangle_1706_i5d1.png",
       "rank": 4
     },
     {
-      "id":"4",
-      "title":"Tea",
-      "description":"with Chocolate",
-      "price":2.23,
+      "id": "4",
+      "title": "Tea",
+      "description": "with Chocolate",
+      "price": 2.23,
       "image": "https://s8.uupload.ir/files/rectangle_1706_i5d1.png",
       "rank": 5
     }
   ],
-  "categories":["Cappuccino", "Machiato", "Latte", "Tea", "Machiato" , "Latte" , "Latte"]
+  "categories": [
+    { "id": "1", "name": "Cappuccino" },
+    { "id": "2", "name": "Machiato" },
+    { "id": "3", "name": "Latte" },
+    { "id": "4", "name": "Tea" }
+  ]
 }
-

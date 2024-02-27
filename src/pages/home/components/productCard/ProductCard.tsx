@@ -7,13 +7,13 @@ import CardProduct from "./components/Card";
 
 
 export default function ProductCard() {
-  const { products , selectedChip , categories } = useContext(AppContext)
+  const { products , selectedChip  } = useContext(AppContext)
   
   if (!products) {
     return null; 
   }
 
-  const filteredProducts = selectedChip !== undefined ? products.filter((product: Product) => product.title === categories[selectedChip]) : products;
+  const filteredProducts = selectedChip !== undefined ? products.filter((product: Product) => product.id === selectedChip) : products;
     
   return (
     <Grid container spacing={2} position='relative' zIndex='1'>
@@ -23,5 +23,5 @@ export default function ProductCard() {
       </Grid>
     ))}
   </Grid>
-  )
+  ) 
 }

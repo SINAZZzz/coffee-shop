@@ -15,20 +15,22 @@ export default function Categories() {
     setSelectedChip(index);
   }; 
  
+  console.log(selectedChip);
+  
   return (
     <Box sx={{width:'100%' , overflowX:'auto' , whiteSpace:'nowrap' , scrollbarWidth:'none'}}>
-        {categories.map((category, index) => (
+        {categories.map((category) => (
                 <Chip
-                key={index}
-                label={category}
+                key={category.id}
+                label={category.name}
                 variant="outlined"
                 style={{borderRadius:'10px',
                     margin: '1rem 5px',
-                    backgroundColor: selectedChip === index ? '#C67C4E' : '#ffffff',
-                    color: selectedChip === index ? '#ffffff' : '#000000',
+                    backgroundColor: selectedChip === category.id ? '#C67C4E' : '#ffffff',
+                    color: selectedChip === category.id ? '#ffffff' : '#000000',
                     border:'none'
                 }}
-                 onClick={() => handleChipClick(index)}
+                 onClick={() => handleChipClick(category.id)}
             />
         ))}
     </Box>
