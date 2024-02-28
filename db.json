@@ -1,11 +1,4 @@
 {
-  "intro": [
-    {
-      "id": "1",
-      "title": "Coffee so good, your taste buds will love it.",
-      "description": "The best grain, the finest roast, the powerful flavor."
-    }
-  ],
   "products": [
     {
       "id": "1",

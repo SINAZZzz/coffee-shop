@@ -4,8 +4,6 @@ import { AppContextType } from "../interfaces/AppContextType";
 import { get } from "../api/http";
 
 export const AppContext = createContext<AppContextType>({
-  dataIntro: '',
-  setDataIntro: () => {} ,
   categories:'',
   setCategories: () => {} ,
   products: '',
@@ -16,17 +14,14 @@ export const AppContext = createContext<AppContextType>({
 
 const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => {
   const [selectedChip, setSelectedChip] = useState<number | undefined>();
-  const [dataIntro, setDataIntro] = useState<string>();
   const [categories, setCategories] = useState<string>();
   const [products, setProducts] = useState<string>();
   
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const introData:string = await get('intro');
         const categoriesData:string = await get('categories');
         const productsData:string = await get('products');
-        setDataIntro(introData[0]);
         setCategories(categoriesData)
         setProducts(productsData)
       } catch (error) {
@@ -40,8 +35,6 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => 
   return (
     <AppContext.Provider
       value={{
-        dataIntro: dataIntro,
-        setDataIntro,
         categories:categories,
         setCategories,
         products:products,
