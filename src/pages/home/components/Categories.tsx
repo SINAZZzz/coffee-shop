@@ -24,7 +24,7 @@ export default function Categories() {
           style={{
             borderRadius: '10px',
             margin: '1rem 5px',
-            backgroundColor: selectedChip === category.id ? '#C67C4E' : '#ffffff',
+            backgroundColor: selectedChip === category.id ? '#C67C4E' : '#FAFAFA',
             color: selectedChip === category.id ? '#ffffff' : '#000000',
             border: 'none',
           }}

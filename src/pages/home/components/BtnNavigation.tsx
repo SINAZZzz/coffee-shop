@@ -47,7 +47,7 @@ export default function BtnNavigation() {
                   sx={{
                     position: "absolute",
                     top: "calc(100% - 20px)",
-                    left: `calc(${20 + index * 25}% - 1.9rem)`,
+                    left: `calc(${20 + index * 25}% - 7.5%)`,
                     transform: "translate(-50%, -50%)",
                     width: "15px",
                     height: "9px",

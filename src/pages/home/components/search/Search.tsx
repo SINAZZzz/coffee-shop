@@ -8,7 +8,7 @@ export default function Search() {
     <Box width='100%'>
         <Paper
             component="form"
-            sx={{  height:'4rem', p: '2px 4px', display: 'flex', alignItems: 'center'   ,backgroundColor:'#313131' , borderRadius:'20px'}}
+            sx={{  height:'4rem', p:'2px 4px', display:'flex', alignItems: 'center'   ,backgroundColor:'#313131' , borderRadius:'20px'}}
             >
             <SearchBtn />
             <InputSearch />
