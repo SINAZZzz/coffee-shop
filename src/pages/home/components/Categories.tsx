@@ -20,11 +20,11 @@ export default function Categories() {
         <Chip
           key={category.id}
           label={category.name}
-          variant="outlined"
+          variant="outlined" 
           style={{
             borderRadius: '10px',
             margin: '1rem 5px',
-            backgroundColor: selectedChip === category.id ? '#C67C4E' : '#FAFAFA',
+            backgroundColor: selectedChip === category.id ? '#C67C4E' : '#ffffff',
             color: selectedChip === category.id ? '#ffffff' : '#000000',
             border: 'none',
           }}
