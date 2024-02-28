@@ -3,8 +3,10 @@ import { useContext } from "react";
 import { AppContext } from "../../../../context/AppContext";
 import { Product } from "../../../../interfaces/Product";
 import CardProduct from "./components/Card";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductCard() {
+  const navigate = useNavigate();
   const { products, selectedChip } = useContext(AppContext);
   
   if (!Array.isArray(products)) {
@@ -14,6 +16,10 @@ export default function ProductCard() {
   const filteredProducts: Product[] = selectedChip !== undefined 
     ? products.filter((product: Product) => product.id === selectedChip) 
     : products;
+
+    const nextPage = () =>{
+      navigate('/Detail-Item')
+    }
     
   return (
     <Grid container spacing={2} position='relative' zIndex='1'>
@@ -25,6 +31,7 @@ export default function ProductCard() {
             price={product.price} 
             rank={product.rank} 
             title={product.title}  
+            onClick={nextPage}
           />
         </Grid>
       ))}

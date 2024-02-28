@@ -8,9 +8,10 @@ import { CardProductProps } from '../../../../../../types/CardProductProps';
 
 
 
-export default function CardProduct({ price, description, title, image, rank }: CardProductProps) {
+export default function CardProduct({ price, description, title, image, rank , onClick  }: CardProductProps) {
   return (
-    <Card sx={{ width: '100%', display: 'flex', flexDirection: 'column', borderRadius: '20px', my: '0.5rem' }}>
+    <Card sx={{ width: '100%', display: 'flex', flexDirection: 'column', borderRadius: '20px', my: '0.5rem' }}
+     onClick={onClick}>
       <Rank rank={rank} />
       <ImageProduct image={image} />
       <Box mx='1rem'>

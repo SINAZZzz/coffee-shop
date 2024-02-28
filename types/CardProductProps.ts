@@ -4,4 +4,5 @@ export type CardProductProps = {
     title: string; 
     image: string; 
     rank: number; 
+    onClick: () => void ;
   }
