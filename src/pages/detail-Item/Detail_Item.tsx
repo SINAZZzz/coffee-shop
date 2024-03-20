@@ -1,20 +1,22 @@
 import { Box, Container, IconButton, Typography } from "@mui/material";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import { useNavigate } from "react-router-dom";
 
 export default function Detail_Item() {
+  const navigate = useNavigate();
   return (
     <Box width='100%' height='100%'>
       <Container>
         {/* head */}
         <Box display='flex' justifyContent='space-between' alignItems='center'>
           <IconButton>
-            <ArrowBackIosNewIcon />
+            <ArrowBackIosNewIcon onClick={() => navigate('/home')} />
           </IconButton>
           <Box fontWeight='bold' fontSize='18px'>
             Detail
           </Box>
-          <IconButton>
+          <IconButton> 
             <FavoriteBorderIcon />
           </IconButton>
         </Box>
