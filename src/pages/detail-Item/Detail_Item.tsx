@@ -42,18 +42,19 @@ export default function Detail_Item() {
         </Box>
         {/* image */}
         <Box>
-          <Box width='100%' mt='1rem' component='img' src="https://s8.uupload.ir/files/rectangle_1706_i5d1.png" />
+          <Box width='100%' mt='1rem' component='img' src="https://s8.uupload.ir/files/rectangle_1706_390a.png" />
         </Box>
         {/* detail */}
         <Box>
           {/* title */}
-          <Typography fontSize='1.6rem' fontWeight='bold'>Cappucino</Typography>
+          <Typography fontSize='1.3rem' fontWeight='bold'>Cappucino</Typography>
           {/* description */}
-          <Typography fontSize='1rem' color='#9B9B9B'>with Chocolate</Typography>
+          <Typography fontSize='0.8rem' color='#9B9B9B' mt='5px'>with Chocolate</Typography>
           {/* rank */}
-          <Box display='flex' width='5rem' justifyContent='center'  alignItems='center' overflow='hidden'>
-            <Box component='img'  src="https://s8.uupload.ir/files/furnitur-icon_bg1w.png" width='30%' mr='5px' />
-            <Box component='p' fontSize='24px' fontWeight='bold'>4.8</Box>
+          <Box display='flex' overflow='hidden' mt='10px'>
+            <Box component='img'  src="https://s8.uupload.ir/files/furnitur-icon_bg1w.png" width='20px' mr='5px' />
+            <Box component='p' fontSize='1rem' fontWeight='bold' pr='5px'>4.8</Box>
+            <Typography fontSize='0.8rem' color='#9B9B9B'>(230)</Typography>
           </Box>
           {/* descriptionProduct */}
           {/* size */}
