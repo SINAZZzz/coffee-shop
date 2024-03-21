@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, Container, IconButton, Typography } from "@mui/material";
+import { Box, Container, IconButton, ToggleButton, ToggleButtonGroup, Typography } from "@mui/material";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -21,9 +21,9 @@ const PinkHeartIconWithBorder = () => (
 export default function Detail_Item() {
   const navigate = useNavigate();
   const [isFavorite, setIsFavorite] = useState(false);
-  const [activeSize, setActiveSize] = useState(null);
+  const [activeSize, setActiveSize] = useState("");
 
-  const handleButtonClick = (size) => {
+  const handleButtonClick = (size:string) => {
     setActiveSize(size);
   };
 
@@ -35,8 +35,8 @@ export default function Detail_Item() {
       <Container>
         {/* head */}
         <Box display='flex' justifyContent='space-between' alignItems='center'>
-          <IconButton>
-            <ArrowBackIosNewIcon onClick={() => navigate('/home')} />
+          <IconButton onClick={() => navigate('/home')}>
+            <ArrowBackIosNewIcon />
           </IconButton>
           <Box fontWeight='bold' fontSize='18px'>
             Detail
@@ -77,23 +77,24 @@ export default function Detail_Item() {
           <Box component='span' color='#C67C4E' fontWeight='bold'>Read More</Box></Typography>
           {/* size */}
           <Typography fontSize='1rem' fontWeight='bold' mt='5px'>Size</Typography>
-          <Box sx={{display:'flex' , justifyContent:'space-around'}}>
+          <Box sx={{ display: 'flex', justifyContent: 'space-around' }}>
             {['S', 'M', 'L'].map((size) => (
-              <Button 
+              <ToggleButton
                 key={size}
+                value={size}
                 sx={{
                   bgcolor: activeSize === size ? '#FFF5EE' : '#FFFFFF',
                   border: activeSize === size ? '#C67C4E 1px solid' : '#DEDEDE 1px solid',
-                  borderRadius:'10px',
-                  px:'2.2rem',
-                  py:'0.4rem',
+                  borderRadius: '10px',
+                  px: '2.2rem',
+                  py: '0.4rem',
                   color: activeSize === size ? '#C67C4E' : '#000000',
-                  mt:"10px"
+                  mt: "10px"
                 }}
                 onClick={() => handleButtonClick(size)}
               >
                 {size}
-              </Button>
+              </ToggleButton>
             ))}
           </Box>
           {/* price */}
