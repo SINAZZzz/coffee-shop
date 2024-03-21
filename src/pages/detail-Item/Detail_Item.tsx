@@ -1,4 +1,4 @@
-import { Box, Container, IconButton, Typography } from "@mui/material";
+import { BottomNavigation, Box, Container, IconButton, ToggleButton, Typography } from "@mui/material";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -21,6 +21,11 @@ const PinkHeartIconWithBorder = () => (
 export default function Detail_Item() {
   const navigate = useNavigate();
   const [isFavorite, setIsFavorite] = useState(false);
+  const [activeSize, setActiveSize] = useState("");
+
+  const handleButtonClick = (size:string) => {
+    setActiveSize(size);
+  };
 
   const handleFavoriteClick = () => {
     setIsFavorite(!isFavorite);
@@ -30,8 +35,8 @@ export default function Detail_Item() {
       <Container>
         {/* head */}
         <Box display='flex' justifyContent='space-between' alignItems='center'>
-          <IconButton>
-            <ArrowBackIosNewIcon onClick={() => navigate('/home')} />
+          <IconButton onClick={() => navigate('/home')}>
+            <ArrowBackIosNewIcon fontSize="small" />
           </IconButton>
           <Box fontWeight='bold' fontSize='18px'>
             Detail
@@ -48,20 +53,79 @@ export default function Detail_Item() {
         <Box>
           {/* title */}
           <Typography fontSize='1.3rem' fontWeight='bold'>Cappucino</Typography>
-          {/* description */}
-          <Typography fontSize='0.8rem' color='#9B9B9B' mt='5px'>with Chocolate</Typography>
-          {/* rank */}
-          <Box display='flex' overflow='hidden' mt='10px'>
-            <Box component='img'  src="https://s8.uupload.ir/files/furnitur-icon_bg1w.png" width='20px' mr='5px' />
-            <Box component='p' fontSize='1rem' fontWeight='bold' pr='5px'>4.8</Box>
-            <Typography fontSize='0.8rem' color='#9B9B9B'>(230)</Typography>
+          <Box display='flex' justifyContent='space-between' alignItems='center'>
+            <Box>
+              {/* description */}
+              <Typography fontSize='0.8rem' color='#9B9B9B' mt='5px'>with Chocolate</Typography>
+              {/* rank */}
+              <Box display='flex' overflow='hidden' mt='10px'>
+                <Box component='img'  src="https://s8.uupload.ir/files/furnitur-icon_bg1w.png" width='20px' mr='5px' />
+                <Box component='p' fontSize='1rem' fontWeight='bold' pr='5px'>4.8</Box>
+                <Typography fontSize='0.8rem' color='#9B9B9B'>(230)</Typography>
+              </Box>
+            </Box>
+            {/* option */}
+            <Box>
+                <Box component='img'  src="https://s8.uupload.ir/files/bean_ll.png" width='20px' mr='10px' borderRadius='10px' bgcolor='#F4F4F4' p='8px' />
+                <Box component='img'  src="https://s8.uupload.ir/files/milk_v5oq.png" width='20px' borderRadius='10px' bgcolor='#F4F4F4' p='8px' />
+              </Box>
           </Box>
+          <Box component='hr' my='15px' color='#EAEAEA' bgcolor='#EAEAEA' height='0.5px' border='1px #EAEAEA solid ' borderRadius='40px' />
           {/* descriptionProduct */}
+          <Typography fontSize='1rem' fontWeight='bold'>Description</Typography>
+          <Typography fontSize='0.8rem' color='#9B9B9B' mt='5px'>A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo.. 
+          <Box component='span' color='#C67C4E' fontWeight='bold'>Read More</Box></Typography>
           {/* size */}
-          {/* price */}
-          {/* btn buy */}
+          <Typography fontSize='1rem' fontWeight='bold' mt='5px'>Size</Typography>
+          <Box sx={{ display: 'flex', justifyContent: 'space-around' }}>
+            {['S', 'M', 'L'].map((size) => (
+              <ToggleButton
+                key={size}
+                value={size}
+                sx={{
+                  bgcolor: activeSize === size ? '#FFF5EE' : '#FFFFFF',
+                  border: activeSize === size ? '#C67C4E 1px solid' : '#DEDEDE 1px solid',
+                  borderRadius: '10px',
+                  px: '2.2rem',
+                  py: '0.4rem',
+                  color: activeSize === size ? '#C67C4E' : '#000000',
+                  mt: "10px"
+                }}
+                onClick={() => handleButtonClick(size)}
+              >
+                {size}
+              </ToggleButton>
+            ))}
+          </Box>
+          
+       
         </Box>
       </Container>
+      {/* Navigation  */}
+      <BottomNavigation 
+       sx={{
+          width: "100%",
+          position: "fixed",
+          bottom: 0,
+          borderRadius:'1rem 1rem 0rem 0rem',
+          height:'5rem',
+          bgcolor:'white',
+          display:'flex',
+          justifyContent:'space-around',
+          alignItems:'center'
+        }}
+        showLabels>
+          {/* price */}
+          <Box display='flex'  flexDirection="column" justifyContent='center' alignItems='start'>
+            <Typography fontSize='0.8rem' color='#9B9B9B' mt='5px'>Price</Typography>
+            <Typography fontSize='1rem' color='#C67C4E' fontWeight='bold'>$ 4.53</Typography>
+          </Box>
+          {/* button Buy */}
+          <Box component='button' 
+          sx={{bgcolor:'#C67C4E' , color:'white' , fontWeight:'bold' , border:'none' , py:'1rem' , px:'4rem' , borderRadius:'10px'}}>
+            Buy Now
+          </Box>
+        </BottomNavigation>
     </Box>
   )
 }
