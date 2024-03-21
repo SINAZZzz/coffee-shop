@@ -1,4 +1,4 @@
-import { Box, Container, IconButton, Typography } from "@mui/material";
+import { Box, Button, ButtonGroup, Container, IconButton, Typography } from "@mui/material";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -21,6 +21,11 @@ const PinkHeartIconWithBorder = () => (
 export default function Detail_Item() {
   const navigate = useNavigate();
   const [isFavorite, setIsFavorite] = useState(false);
+  const [activeSize, setActiveSize] = useState(null);
+
+  const handleButtonClick = (size) => {
+    setActiveSize(size);
+  };
 
   const handleFavoriteClick = () => {
     setIsFavorite(!isFavorite);
@@ -71,6 +76,26 @@ export default function Detail_Item() {
           <Typography fontSize='0.8rem' color='#9B9B9B' mt='5px'>A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo.. 
           <Box component='span' color='#C67C4E' fontWeight='bold'>Read More</Box></Typography>
           {/* size */}
+          <Typography fontSize='1rem' fontWeight='bold' mt='5px'>Size</Typography>
+          <Box sx={{display:'flex' , justifyContent:'space-around'}}>
+            {['S', 'M', 'L'].map((size) => (
+              <Button 
+                key={size}
+                sx={{
+                  bgcolor: activeSize === size ? '#FFF5EE' : '#FFFFFF',
+                  border: activeSize === size ? '#C67C4E 1px solid' : '#DEDEDE 1px solid',
+                  borderRadius:'10px',
+                  px:'2.2rem',
+                  py:'0.4rem',
+                  color: activeSize === size ? '#C67C4E' : '#000000',
+                  mt:"10px"
+                }}
+                onClick={() => handleButtonClick(size)}
+              >
+                {size}
+              </Button>
+            ))}
+          </Box>
           {/* price */}
           {/* btn buy */}
         </Box>
