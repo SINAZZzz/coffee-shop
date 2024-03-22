@@ -12,7 +12,7 @@ export const AppContext = createContext<AppContextType>({
   setSelectedChip: () => {} ,
   productId: 0,
   setProductId: () => {} ,
-});
+}); 
 
 const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => {
   const [selectedChip, setSelectedChip] = useState<number | undefined>();

@@ -2,20 +2,41 @@ import { BottomNavigation, Box, Container, Typography } from "@mui/material";
 import Head from "./components/Head";
 import ProductImg from "./components/ProductImg";
 import Detail from "./components/detail/Detail";
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 
 
 
-
+type ProductType = {
+  title: string;
+  description: string;
+  rank: number;
+};
 
 export default function Detail_Item() {
+  const { products , productId } = useContext(AppContext);
+  if (!products) {
+    return <div>Loading...</div>;
+  }
 
+  if (productId === undefined || productId >= products.length) {
+    return <div>Product not found.</div>;
+  }
+
+  const productCandidate = products[productId];
+
+  if (typeof productCandidate !== 'object' || productCandidate === null) {
+    return <div>Error: Product data is not in the expected format.</div>;
+  }
+
+  const product: ProductType = productCandidate as ProductType;
 
   return (
     <Box width='100%' height='100%'>
       <Container>
         <Head />
         <ProductImg />
-       <Detail />
+        <Detail description={product.description}  rank={product.rank} title={product.title} />
       </Container>
       {/* Navigation  */}
       <BottomNavigation 
