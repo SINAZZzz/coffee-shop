@@ -15,7 +15,6 @@ export default function Detail_Item() {
       <Container>
         <Head />
         <ProductImg />
-        {/* detail */}
        <Detail />
       </Container>
       {/* Navigation  */}

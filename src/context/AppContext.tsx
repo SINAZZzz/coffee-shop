@@ -10,12 +10,15 @@ export const AppContext = createContext<AppContextType>({
   setProducts: () => {},
   selectedChip: 0,
   setSelectedChip: () => {} ,
+  productId: 0,
+  setProductId: () => {} ,
 });
 
 const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => {
   const [selectedChip, setSelectedChip] = useState<number | undefined>();
   const [categories, setCategories] = useState<string>();
   const [products, setProducts] = useState<string>();
+  const [productId , setProductId] = useState<number>();
   
   useEffect(() => {
     const fetchData = async () => {
@@ -40,7 +43,9 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => 
         products:products,
         setProducts,
         selectedChip:selectedChip,
-        setSelectedChip
+        setSelectedChip,
+        productId:productId,
+        setProductId
       }}
     >
       {children}
