@@ -10,4 +10,6 @@ export interface AppContextType {
     setProducts: React.Dispatch<React.SetStateAction<string | undefined>>;
     selectedChip:number | undefined;
     setSelectedChip: React.Dispatch<React.SetStateAction<number | undefined>>;
+    productId : number | undefined;
+    setProductId: React.Dispatch<React.SetStateAction<number | undefined>> ;
 }   
