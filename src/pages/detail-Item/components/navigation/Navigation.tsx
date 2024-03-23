@@ -1,5 +1,5 @@
 import { BottomNavigation } from '@mui/material'
-import BtnBuy from './components/btnBuy'
+import BtnBuy from './components/BtnBuy'
 import Price from './components/Price'
 
 export default function Navigation({price} : {price : number}) {
