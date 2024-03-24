@@ -5,7 +5,7 @@
       "title": "Cappuccino",
       "description": "with Chocolate",
       "descriptionProduct": "A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo.. Read More",
-      "price": 2.23,
+      "price": 4.23,
       "image": "https://s8.uupload.ir/files/rectangle_1706_i5d1.png",
       "rank": 2.3
     }, 
@@ -14,7 +14,7 @@
       "title": "Machiato", 
       "description": "with Chocolate",
       "descriptionProduct": "A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo.. Read More",
-      "price": 2.23,
+      "price": 5,
       "image": "https://s8.uupload.ir/files/rectangle_1706_i5d1.png",
       "rank": 2.4
     },
@@ -23,7 +23,7 @@
       "title": "Latte",
       "description": "with Chocolate",
       "descriptionProduct": "A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo.. Read More",
-      "price": 2.23,
+      "price": 20,
       "image": "https://s8.uupload.ir/files/rectangle_1706_i5d1.png",
       "rank": 4
     },
@@ -32,7 +32,7 @@
       "title": "Tea",
       "description": "with Chocolate",
       "descriptionProduct": "A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo.. Read More",
-      "price": 2.23,
+      "price": 100,
       "image": "https://s8.uupload.ir/files/rectangle_1706_i5d1.png",
       "rank": 5
     }
