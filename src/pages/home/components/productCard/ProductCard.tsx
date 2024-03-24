@@ -19,7 +19,7 @@ export default function ProductCard() {
  
     const nextPage = (id:number) =>{
       setProductId(id);
-      navigate('/Detail-Item')
+      navigate('/detail-Item')
     }
     
   return (
