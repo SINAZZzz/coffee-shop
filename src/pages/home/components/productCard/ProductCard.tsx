@@ -17,8 +17,8 @@ export default function ProductCard() {
     ? products.filter((product: Product) => product.id === selectedChip) 
     : products;
  
-    const nextPage = (id:number) =>{
-      setProductId(id);
+    const nextPage = () =>{
+      setProductId(0);
       navigate('/detail-Item')
     }
     
@@ -32,7 +32,7 @@ export default function ProductCard() {
             price={product.price} 
             rank={product.rank} 
             title={product.title}  
-            onClick={() => nextPage(product.id)}
+            onClick={() => nextPage()}
           />
         </Grid>
       ))}
