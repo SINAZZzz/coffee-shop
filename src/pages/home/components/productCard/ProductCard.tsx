@@ -16,7 +16,7 @@ export default function ProductCard() {
   const filteredProducts: Product[] = selectedChip !== undefined 
     ? products.filter((product: Product) => product.id === selectedChip) 
     : products;
-
+ 
     const nextPage = (id:number) =>{
       setProductId(id);
       navigate('/Detail-Item')
