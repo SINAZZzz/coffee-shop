@@ -1,17 +1,5 @@
 import { Typography } from '@mui/material';
-
-type TextAlign ={
-  align?: 'left' | 'center' | 'right' | 'justify';
-}
-
-interface TitleProps {
-    fontSize: number;
-    title: string;
-    mt?: string;
-    mx?: string;
-    color?: string;
-    textAlign?: TextAlign;
-  }
+import { TitleProps } from '../interfaces/TitleProps';
 
 export default function Title({title , fontSize , mt , color , mx , textAlign} :TitleProps) {
   return (

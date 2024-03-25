@@ -1,4 +1,4 @@
-export type CardProductProps = {
+export interface CardProductProps {
     price: number;
     description: string;
     title: string; 
