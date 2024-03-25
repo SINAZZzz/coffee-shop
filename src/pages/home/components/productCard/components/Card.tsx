@@ -19,6 +19,6 @@ export default function CardProduct({ price, description, title, image, rank , o
         <Description description={description} />
         <Price price={price} />
       </Box>
-    </Card>
+    </Card> 
   )
 }
