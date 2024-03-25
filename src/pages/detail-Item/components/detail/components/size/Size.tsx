@@ -1,4 +1,4 @@
-import Title from "../../../Title";
+import Title from "../../../../../../components/Title";
 import BtnSize from "./components/BtnSize";
 
 export default function Size() {
