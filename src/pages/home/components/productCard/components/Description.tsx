@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material'
-import { DescriptionType } from '../../../../../../types/DescriptionType';
+import { DescriptionType } from '../../../../../types/DescriptionType';
 
 
 
