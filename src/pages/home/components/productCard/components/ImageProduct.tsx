@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { ImageType } from '../../../../../../types/ImageType';
+import { ImageType } from '../../../../../types/ImageType';
 
 
 

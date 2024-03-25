@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
-import { priceType } from '../../../../../../types/priceType';
+import { priceType } from '../../../../../types/priceType';
 
 
 export default function Price({price} : priceType) {

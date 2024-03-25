@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { RankType } from '../../../../../../types/RankType';
+import { RankType } from '../../../../../types/RankType';
 
 
 

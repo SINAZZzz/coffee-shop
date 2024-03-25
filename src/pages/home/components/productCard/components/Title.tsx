@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import { TitleType } from '../../../../../../types/TitleType';
+import { TitleType } from '../../../../../types/TitleType';
 
 
 

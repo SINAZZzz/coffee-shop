@@ -4,7 +4,7 @@ import Rank from "./Rank";
 import Title from "./Title";
 import Description from "./Description";
 import Price from "./Price";
-import { CardProductProps } from '../../../../../../types/CardProductProps';
+import { CardProductProps } from '../../../../../types/CardProductProps';
 
 
 
