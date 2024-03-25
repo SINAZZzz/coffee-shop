@@ -1,7 +1,7 @@
 import { BottomNavigation } from '@mui/material'
-import BtnBuy from './components/BtnBuy'
 import Price from './components/Price'
 import { useNavigate } from "react-router-dom";
+import Btn from '../../../../components/Btn';
 export default function Navigation({price} : {price : number}) {
   const navigate = useNavigate();
 
@@ -24,7 +24,7 @@ export default function Navigation({price} : {price : number}) {
                 }}
                 showLabels>
                     <Price price={price}/>
-                    <BtnBuy onclick={nextPage} />
+                    <Btn Title='Buy Now' bgcolor='C67C4E' color='white' px={25} onClick={nextPage} />
         </BottomNavigation>
     </>
   )
