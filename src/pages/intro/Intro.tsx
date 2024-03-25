@@ -9,10 +9,11 @@ export default function Intro() {
     <>
     <Box bgcolor='black' width='100%' height='100vh'>
       <Background />
-      <Title fontSize={2} title="Coffee so good, your taste buds will love it." color="white" mx='2rem' textAlign='center' />
+      <Title fontSize={2} title="Coffee so good, your taste buds will love it." color="white" mx='2rem' textAlign="center" />
       <Description />
       <GetStartBtn />
     </Box>
     </>
   )
 }
+ 
