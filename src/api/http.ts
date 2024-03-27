@@ -1,7 +1,7 @@
 import axios, { AxiosResponse, AxiosRequestConfig } from "axios";
 import { CustomError } from "../interfaces/CustomError";
 
-axios.defaults.baseURL = "http://localhost:5007/";
+axios.defaults.baseURL = "https://coffee-shop-data.vercel.app/";
 
 
 
