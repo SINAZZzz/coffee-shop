@@ -4,6 +4,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { useState } from 'react';
+import useWindowSize from '../../../functions/Utility';
 
 export default function BtnNavigation() {
     const [selected, setSelected] = useState<number | undefined>(0);
@@ -14,6 +15,9 @@ export default function BtnNavigation() {
   
     const iconStyles = { color: '#8D8D8D' };
     const selectedIconStyles = { color: '#C67C4E' };
+
+    const { width } = useWindowSize();
+
   return (
     <BottomNavigation
               sx={{
@@ -47,9 +51,9 @@ export default function BtnNavigation() {
                   sx={{
                     position: "absolute",
                     top: "calc(100% - 20px)",
-                    left: `calc(${20 + index * 25}% - 7.5%)`,
+                    left: width > 670 ? `calc(${19.8 + index * 22}% - 2.8%)` : `calc(${20 + index * 25}% - 7.5%)`,
                     transform: "translate(-50%, -50%)",
-                    width: "15px",
+                    width: width > 670 ? "20px" : "15px",
                     height: "9px",
                     borderRadius: "20px",
                     background: selected === index ? "linear-gradient(to left bottom, #C67C4E, #EDAB81)" : "transparent",

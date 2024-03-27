@@ -14,7 +14,7 @@ export default function Intro() {
 
   return (
     <>
-    <Box bgcolor='black' width='100%' height='100vh'>
+    <Box bgcolor='black' width='100%' height='100%'>
       <Background />
       <Title fontSize={2} title="Coffee so good, your taste buds will love it." color="white" mx='2rem' textAlign="center" />
       <Description color="A9A9A9" fontSize="1.1rem" mx="3rem" my="1rem" textAlign="center"
