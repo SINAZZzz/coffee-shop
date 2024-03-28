@@ -1,11 +1,8 @@
 # Coffee Shop
 
-<div style="color: red;">
-    <b>
-        React + Vite + Ts + Mui 
-    </b>
-</div>
-
+<b>
+     React + Vite + Ts + Mui 
+</b>
 
 <h2> Created by </h2>
 <b>Sina Zinsaz</b>
