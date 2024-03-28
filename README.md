@@ -4,9 +4,8 @@
               linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box; 
               border: 2px solid transparent;
               border-radius: 8px; 
-              width: fit-content;
-                height: fit-content;
-                padding: 20px;">
+              width: 100%;
+                height: 10px;">
     <b>
         React + Vite + Ts + Mui 
     </b>
