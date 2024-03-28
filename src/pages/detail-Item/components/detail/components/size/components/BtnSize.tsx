@@ -1,7 +1,9 @@
 import { Box, ToggleButton } from '@mui/material'
 import { useState } from 'react';
+import useWindowSize from '../../../../../../../functions/Utility';
 
 export default function BtnSize() {
+  const { width } = useWindowSize();
             
   const [activeSize, setActiveSize] = useState("");
 
@@ -19,7 +21,7 @@ export default function BtnSize() {
                 bgcolor: activeSize === size ? '#FFF5EE' : '#FFFFFF',
                 border: activeSize === size ? '#C67C4E 1px solid' : '#DEDEDE 1px solid',
                 borderRadius: '10px',
-                px: '2.2rem',
+                px: width > 767 ? "15%" : "12%",
                 py: '0.4rem',
                 color: activeSize === size ? '#C67C4E' : '#000000',
                 mt: "10px",
