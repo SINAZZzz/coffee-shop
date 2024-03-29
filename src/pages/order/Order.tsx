@@ -11,6 +11,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 
 export default function Order() {
   const [active, setActive] = useState(0);
+  const [value, setValue] = useState(1);
 
   return (
     <>
@@ -64,16 +65,15 @@ export default function Order() {
                       </Box>
                   </Box>
                   <Box display='flex' justifyContent='center' alignItems='center'>
-                    <IconButton sx={{border:'1px solid', width:"1.7rem" , height:'1.7rem' }}>
+                    <IconButton onClick={() => setValue(value - 1)}  sx={{border:'1px solid', width:"1.7rem" , height:'1.7rem' }} disabled={value === 1}>
                       <RemoveIcon fontSize="small" style={{color:"black"}} />
                     </IconButton>
-                    <Typography color='black' fontWeight='bold' mx='1rem'>1</Typography>
-                    <IconButton sx={{border:'1px solid', width:"1.7rem" , height:'1.7rem' }}>
+                    <Typography color='black' fontWeight='bold' mx='1rem'>{value}</Typography>
+                    <IconButton onClick={() => setValue(value + 1)} sx={{border:'1px solid', width:"1.7rem" , height:'1.7rem' }}>
                       <AddIcon fontSize="small" style={{color:"black"}} />
                     </IconButton>
                   </Box>
                 </Box>
-                  {/* ... */}
       </Container>
       <Hr my="15px" border="3px #EAEAEA solid"  />
       <Container>
