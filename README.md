@@ -4,7 +4,6 @@
     React + Vite + Ts + Mui 
 </b>
 
-
 <h2> Created by </h2>
 <b>Sina Zinsaz</b>
 
