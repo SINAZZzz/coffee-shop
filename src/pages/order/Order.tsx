@@ -5,6 +5,7 @@ import Title from "../../components/Title";
 import Description from "../../components/Description";
 import BorderColorOutlinedIcon from '@mui/icons-material/BorderColorOutlined';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
+import Hr from "../../components/Hr";
 
 export default function Order() {
   const [active, setActive] = useState(0);
@@ -49,7 +50,21 @@ export default function Order() {
                 style={{color:'#303336' , fontSize:'15px'}}  />} sx={{ml:'1rem'}} label="Edit Address" variant="outlined"  />
               </Box>
             </Box>
-
+            {/* hr */}
+          <Hr my="15px" border="1px #EAEAEA solid"  />
+                  {/* Number of products ordered */}
+                  {/* ... */}
+      </Container>
+      <Hr my="15px" border="3px #EAEAEA solid"  />
+      <Container>
+        {/* discount box */}
+        {/* ... */}
+        {/* Payment Summary */}
+        {/* Price */}
+        {/* Delivery Fee */}
+        <Hr my="15px" border="1px #EAEAEA solid"  />
+        {/* Total Payment */}
+        {/* nav btn */}
       </Container>
     </>
   )
