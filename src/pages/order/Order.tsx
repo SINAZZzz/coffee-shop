@@ -1,13 +1,9 @@
-import { Box, Container, IconButton, Tab, Tabs } from "@mui/material";
+import { BottomNavigation, BottomNavigationAction, Box, Container, IconButton, Tab, Tabs } from "@mui/material";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { useState } from "react";
 
 export default function Order() {
-  const [value, setValue] =useState('one');
-
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue);
-  };
+  const [active, setActive] = useState(0);
 
   return (
     <>
@@ -22,29 +18,21 @@ export default function Order() {
           </Box>
         </Box>
         {/* Tab */}
-        <Box display='flex' width='100%' alignItems='center' justifyContent='center'>
-  <Box sx={{ width: '100%' }} display='flex' justifyContent='center'>
-  <Tabs
-  value={value}
-  onChange={handleChange}
-  textColor="inherit"
-  sx={{
-    backgroundColor:'#F2F2F2',
-    borderRadius:'15px',
-    width: '100%',
-    margin: 'auto',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'end'
-  }}
-  aria-label="secondary tabs example"
->
-  <Tab value="one" label="Item One" />
-  <Tab value="two" label="Item Two" />
-</Tabs>
-
-  </Box>
-</Box>
+        <Box sx={{ width: '100%' }}>
+          <BottomNavigation
+            showLabels
+            value={active}
+            onChange={(e, newValue) => {
+              setActive(newValue);
+            }}
+            sx={{bgcolor:'#F2F2F2' ,borderRadius:'20px'}}
+          >
+            <BottomNavigationAction label="Deliver" sx={{bgcolor:active ? "inherit" : "#C67C4E" ,
+             borderRadius:'15px' , m:"5px" , fontWeight:'bold'}} style={{ color: active ? "inherit" : "white" }} />
+            <BottomNavigationAction label="Pick Up" sx={{bgcolor:!active ? "inherit" : "#C67C4E" ,
+             borderRadius:'15px' , m:"5px" , fontWeight:'bold'}} style={{ color: !active ? "inherit" : "white" }} />
+          </BottomNavigation>
+        </Box>
 
 
       </Container>
