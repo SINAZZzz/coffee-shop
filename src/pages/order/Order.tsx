@@ -107,6 +107,10 @@ export default function Order() {
         </Box>
         <Hr my="15px" border="1px #EAEAEA solid"  />
         {/* Total Payment */}
+        <Box display='flex' justifyContent='space-between' alignItems='center'>
+          <Typography>Total Payment</Typography>
+          <Typography>$ 5.53</Typography>
+        </Box>
         {/* nav btn */}
       </Container>
     </>
