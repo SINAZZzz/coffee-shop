@@ -13,7 +13,7 @@ export default function Head() {
   }
   
   return (
-    <Box display='flex' justifyContent='space-between' alignItems='center'>
+  <Box display='flex' justifyContent='space-between' alignItems='center'>
     <IconButton onClick={() => navigate('/home')}>
       <ArrowBackIosNewIcon fontSize="small" />
     </IconButton>

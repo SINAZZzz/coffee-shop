@@ -1,7 +1,7 @@
 # Coffee Shop
 
 <b>
-     React + Vite + Ts + Mui 
+    React + Vite + Ts + Mui 
 </b>
 
 <h2> Created by </h2>
@@ -9,7 +9,7 @@
 
 Links =>
 
-🌝 Stackoverflow address : https://stackoverflow.com/users/20870363/sina-zinsaz <br />
+🌝 StackOverFlow address : https://stackoverflow.com/users/20870363/sina-zinsaz <br />
 🌼 GitHub address : https://github.com/SINAZZzz <br />
 💥 dev address : https://dev.to/sinazinsaz <br /> 
 🌼 Linkedin : https://www.linkedin.com/in/sina-zinsaz-a71061244/ <br />
