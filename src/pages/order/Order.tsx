@@ -22,7 +22,7 @@ export default function Order() {
           <BottomNavigation
             showLabels
             value={active}
-            onChange={(e, newValue) => {
+            onChange={(_, newValue) => {
               setActive(newValue);
             }}
             sx={{bgcolor:'#F2F2F2' ,borderRadius:'20px'}}
