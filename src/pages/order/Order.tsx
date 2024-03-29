@@ -8,6 +8,8 @@ import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import Hr from "../../components/Hr";
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import PercentIcon from '@mui/icons-material/Percent';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 export default function Order() {
   const [active, setActive] = useState(0);
@@ -75,13 +77,34 @@ export default function Order() {
                   </Box>
                 </Box>
       </Container>
+      {/* hr */}
       <Hr my="15px" border="3px #EAEAEA solid"  />
       <Container>
         {/* discount box */}
-        {/* ... */}
+        <Box border='1px solid #EAEAEA' display='flex' justifyContent='space-between' alignItems='center' p='10px' borderRadius='15px' >
+          <Box display='flex' alignItems='center' justifyContent='center'>
+            <PercentIcon fontSize="small" style={{color:'#C67C4E' , marginRight:'0.5rem'}} />
+            <Typography>1 Discount is applied</Typography>
+          </Box>
+          <Box display='flex' alignItems='center' justifyContent='center'>
+            <ArrowForwardIosIcon fontSize="small" />
+          </Box>
+        </Box>
         {/* Payment Summary */}
+        <Title title="Payment Summary" fontSize={1} />
         {/* Price */}
+        <Box display='flex' justifyContent='space-between' alignItems='center'>
+          <Typography>Price</Typography>
+          <Typography>$ 4.53</Typography>
+        </Box>
         {/* Delivery Fee */}
+        <Box display='flex' justifyContent='space-between' alignItems='center'>
+          <Typography>Delivery Fee</Typography>
+          <Box display='flex'>
+            <Typography mr='0.5rem'><s>$ 2.0</s></Typography>
+            <Typography>$ 1.0</Typography>
+          </Box>
+        </Box>
         <Hr my="15px" border="1px #EAEAEA solid"  />
         {/* Total Payment */}
         {/* nav btn */}
