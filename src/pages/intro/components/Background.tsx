@@ -4,7 +4,7 @@ export default function Background() {
   return (
     <>
         <Box component='img' src="https://s8.uupload.ir/files/image_3_ysrq.png" alt="intro img" 
-        sx={{width:'100%'}} />
+        sx={{width:'100%' , height:'21rem'}} />
     </>
   )
 }
