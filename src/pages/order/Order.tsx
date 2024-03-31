@@ -14,11 +14,12 @@ import Btn from "../../components/Btn";
 import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import useWindowSize from "../../functions/Utility";
+import { useNavigate } from "react-router-dom";
 
 export default function Order() {
-  const [value, setValue] = useState(1);
+  const [value, setValue] = useState(1); 
   const { width } = useWindowSize();
-
+  const navigate = useNavigate();
 
   const [activeTab, setActiveTab] = useState('Deliver');
 
@@ -31,7 +32,7 @@ export default function Order() {
       <Container>
         {/* Head */}
         <Box display='flex' alignItems='center'>
-          <IconButton>
+          <IconButton onClick={() => navigate('/detail-Item')}>
             <ArrowBackIosNewIcon fontSize="small" />
           </IconButton>
           <Box fontWeight='bold' fontSize='18px' textAlign='center' width='100%' ml='-2.5rem'>

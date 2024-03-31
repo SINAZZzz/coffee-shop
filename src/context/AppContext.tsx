@@ -35,7 +35,7 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => 
     fetchData();
   }, []); 
 
-  const memoizedProductId = useMemo(() => productId, [productId]);
+  // const memoizedProductId = useMemo(() => productId, [productId]);
   
   return (
     <AppContext.Provider
@@ -46,7 +46,7 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => 
         setProducts,
         selectedChip:selectedChip,
         setSelectedChip,
-        productId:memoizedProductId,
+        productId:productId,
         setProductId
       }}
     >
