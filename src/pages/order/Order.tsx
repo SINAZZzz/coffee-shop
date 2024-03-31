@@ -1,4 +1,4 @@
-import { BottomNavigation, BottomNavigationAction, Box, Chip, Container, IconButton, Typography } from "@mui/material";
+import { BottomNavigation, Box, Chip, Container, IconButton, Typography } from "@mui/material";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { useState } from "react";
 import Title from "../../components/Title";
@@ -13,10 +13,18 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Btn from "../../components/Btn";
 import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import useWindowSize from "../../functions/Utility";
 
 export default function Order() {
-  const [active, setActive] = useState(0);
   const [value, setValue] = useState(1);
+  const { width } = useWindowSize();
+
+
+  const [activeTab, setActiveTab] = useState('Deliver');
+
+  const handleTabClick = (tabName:string) => {
+    setActiveTab(tabName);
+  };
 
   return (
     <>
@@ -31,31 +39,54 @@ export default function Order() {
           </Box>
         </Box>
         {/* Tab */}
-        <Box sx={{ width: '100%' }}>
-          <BottomNavigation
-            showLabels
-            value={active}
-            onChange={(_, newValue) => {
-              setActive(newValue);
-            }}
-            sx={{bgcolor:'#F2F2F2' ,borderRadius:'20px'}}
-          >
-            <BottomNavigationAction label="Deliver" sx={{bgcolor:active ? "inherit" : "#C67C4E" ,
-             borderRadius:'15px' , m:"5px" , fontWeight:'bold'}} style={{ color: active ? "inherit" : "white" }} />
-            <BottomNavigationAction label="Pick Up" sx={{bgcolor:!active ? "inherit" : "#C67C4E" ,
-             borderRadius:'15px' , m:"5px" , fontWeight:'bold'}} style={{ color: !active ? "inherit" : "white" }} />
-          </BottomNavigation>
-        </Box>
+        <Box width="100%" bgcolor="#F2F2F2" display="flex" borderRadius='12px' my='1rem'>
+      <Typography
+        variant="body1"
+        onClick={() => handleTabClick('Deliver')}
+        style={{
+          width: '50%',
+          cursor: 'pointer',
+          backgroundColor: activeTab === 'Deliver' ? '#C67C4E' : 'transparent',
+          padding: '8px',
+          borderRadius:'12px',
+          color: activeTab === 'Deliver' ? 'white' : 'inherit',
+          margin:"4px",
+          display:'flex',
+          alignItems:'center',
+          justifyContent:'center'
+        }}
+      >
+        Deliver
+      </Typography>
+      <Typography
+        variant="body1"
+        onClick={() => handleTabClick('Pick Up')}
+        style={{
+          width: '50%',
+          cursor: 'pointer',
+          backgroundColor: activeTab === 'Pick Up' ? '#C67C4E' : 'transparent',
+          padding: '8px',
+          borderRadius:'12px',
+          color: activeTab === 'Pick Up' ? 'white' : 'inherit',
+          margin:"4px",
+          display:'flex',
+          alignItems:'center',
+          justifyContent:'center',
+        }}
+      >
+        Pick Up
+      </Typography>
+    </Box>
         {/* address */}
             <Box>
               <Title title="Delivery Address" fontSize={1} />
-              <Title title="Jl. Kpg Sutoyo" fontSize={0.9} />
-              <Description description="Kpg. Sutoyo No. 620, Bilzen, Tanjungbalai." color="808080" fontSize="0.8rem" textAlign="left" />
+              <Title title="Jl. Kpg Sutoyo" fontSize={0.9} mt="0.5rem" />
+              <Description description="Kpg. Sutoyo No. 620, Bilzen, Tanjungbalai." my="0.5rem" color="808080" fontSize="0.8rem" textAlign="left" />
               <Box display='flex'>
                 <Chip icon={<BorderColorOutlinedIcon 
-                style={{color:'#303336' , fontSize:'15px'}}  />} label="Edit Address" variant="outlined" />
+                style={{color:'#303336' , fontSize:'15px'}}  />} sx={{px:'7px'}} label="Edit Address" variant="outlined" />
                 <Chip icon={<ArticleOutlinedIcon 
-                style={{color:'#303336' , fontSize:'15px'}}  />} sx={{ml:'1rem'}} label="Edit Address" variant="outlined"  />
+                style={{color:'#303336' , fontSize:'15px'}}  />} sx={{ml:'1rem' , px:'7px'}} label="Add Note" variant="outlined"  />
               </Box>
             </Box>
             {/* hr */}
@@ -70,11 +101,11 @@ export default function Order() {
                       </Box>
                   </Box>
                   <Box display='flex' justifyContent='center' alignItems='center'>
-                    <IconButton onClick={() => setValue(value - 1)}  sx={{border:'1px solid', width:"1.7rem" , height:'1.7rem' }} disabled={value === 1}>
+                    <IconButton onClick={() => setValue(value - 1)}  sx={{border:'1px solid #EAEAEA', width:"1.7rem" , height:'1.7rem' }} disabled={value === 1}>
                       <RemoveIcon fontSize="small" style={{color:"black"}} />
                     </IconButton>
                     <Typography color='black' fontWeight='bold' mx='1rem'>{value}</Typography>
-                    <IconButton onClick={() => setValue(value + 1)} sx={{border:'1px solid', width:"1.7rem" , height:'1.7rem' }}>
+                    <IconButton onClick={() => setValue(value + 1)} sx={{border:'1px solid #EAEAEA', width:"1.7rem" , height:'1.7rem' }}>
                       <AddIcon fontSize="small" style={{color:"black"}} />
                     </IconButton>
                   </Box>
@@ -84,7 +115,7 @@ export default function Order() {
       <Hr my="15px" border="3px #EAEAEA solid"  />
       <Container>
         {/* discount box */}
-        <Box border='1px solid #EAEAEA' display='flex' justifyContent='space-between' alignItems='center' p='10px' borderRadius='15px' >
+        <Box border='1px solid #EAEAEA' display='flex' justifyContent='space-between' mb="1rem" alignItems='center' p='10px' borderRadius='15px' >
           <Box display='flex' alignItems='center' justifyContent='center'>
             <PercentIcon fontSize="small" style={{color:'#C67C4E' , marginRight:'0.5rem'}} />
             <Typography>1 Discount is applied</Typography>
@@ -96,7 +127,7 @@ export default function Order() {
         {/* Payment Summary */}
         <Title title="Payment Summary" fontSize={1} />
         {/* Price */}
-        <Box display='flex' justifyContent='space-between' alignItems='center'>
+        <Box display='flex' justifyContent='space-between' alignItems='center' my='0.5rem' fontSize='12px'>
           <Typography>Price</Typography>
           <Typography>$ 4.53</Typography>
         </Box>
@@ -108,7 +139,7 @@ export default function Order() {
             <Typography>$ 1.0</Typography>
           </Box>
         </Box>
-        <Hr my="15px" border="1px #EAEAEA solid"  />
+        <Hr my="10px" border="1px #EAEAEA solid"  />
         {/* Total Payment */}
         <Box display='flex' justifyContent='space-between' alignItems='center'>
           <Typography>Total Payment</Typography>
@@ -148,7 +179,7 @@ export default function Order() {
               </Box>
             </Box>
             <Box display='flex' width='100%' mt='1rem'>
-              <Btn Title='Order' fontSize='1rem' borderRadius='15px' border='none' bgcolor='C67C4E' color='white' px={45} py={6} />
+              <Btn Title='Order' fontSize='1rem' borderRadius='15px' border='none' bgcolor='C67C4E' color='white' px={45} py={width > 767 ? 3 : 6} />
               </Box>
           </Container>
         </BottomNavigation>
