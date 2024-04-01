@@ -1,10 +1,9 @@
-import { BottomNavigation, Box, Container, IconButton, Typography } from "@mui/material";
+import { BottomNavigation, Box, Container, Grid, IconButton, Typography } from "@mui/material";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import MyLocationOutlinedIcon from '@mui/icons-material/MyLocationOutlined';
 import { useNavigate } from "react-router-dom";
 import Title from "../../components/Title";
-import PercentIcon from '@mui/icons-material/Percent';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Description from "../../components/Description";
 
 export default function Delivery() {
     const navigate = useNavigate();
@@ -57,23 +56,36 @@ export default function Delivery() {
                 <Typography fontSize='12px'><Box component='span' color='#808080'>Delivery to </Box><Box component='span' fontWeight='bold'> Jl. Kpg Sutoyo</Box></Typography>
             </Box>
             {/* done step by step  */}
-            <Box display='flex' flexDirection='row' justifyContent='center' alignItems='center' my='0.5rem'>
-            {[0, 1, 2].map((index) => (
-                <Box key={index} component='hr' width='3.5rem' border='2px solid #36C07E' borderRadius='15px' mx='0.2rem' />
-              ))} 
-                <Box component='hr' width='3.5rem' border='2px solid #DFDFDF' borderRadius='15px' mx='0.2rem' />
-            </Box>
+            <Grid container spacing={1} display='flex' flexDirection='row' justifyContent='center' alignItems='center' my='0.5rem'>
+                {[0, 1, 2].map((index) => (
+                    <Grid item xs={3} key={index}>
+                        <Box component='hr' border='2px solid #36C07E' borderRadius='15px' />
+                    </Grid>
+                ))} 
+                 <Grid item xs={3}>
+                    <Box component='hr' border='2px solid #DFDFDF' borderRadius='15px' />
+                 </Grid>
+            </Grid>
+
             {/* Delivered your order box  */}
-            <Box border='1px solid #EAEAEA' display='flex' justifyContent='space-between' mb="1rem" alignItems='center' p='10px' borderRadius='15px' >
+            <Box border='1px solid #EAEAEA' display='flex' justifyContent='space-between' mb="1rem" alignItems='center' p='15px' borderRadius='15px' >
                 <Box display='flex' alignItems='center' justifyContent='center'>
-                    <PercentIcon fontSize="small" style={{color:'#C67C4E' , marginRight:'0.5rem'}} />
-                    <Typography>1 Discount is applied</Typography>
-                </Box>
-                <Box display='flex' alignItems='center' justifyContent='center'>
-                    <ArrowForwardIosIcon fontSize="small" />
+                    <Box border='1px solid #EAEAEA' display='flex' justifyContent='center' alignItems='center' p='15px' borderRadius='15px' mr='1rem'>
+                        <Box component='img' src='https://s8.uupload.ir/files/bike_i4jm.png' width='3.5rem' />
+                    </Box>
+                    <Box>
+                        <Title fontSize={1} title="Delivered your order" />
+                        <Description fontSize="0.8rem" description="We deliver your goods to you in the shortes possible time." color="#808080" textAlign="left" />
+                    </Box>
                 </Box>
             </Box>
             {/* user name and phone */}
+            <Box>
+                <Avatar sx={{backgroundColor:'transparent'}} variant="rounded">
+                    <Box component="img" src="https://s6.uupload.ir/files/user_0ek2.jpg"
+                        sx={{width:'3rem' , borderRadius:'10px'}} />
+                </Avatar>
+            </Box>
           </Container>
         </BottomNavigation>
         </Box>
