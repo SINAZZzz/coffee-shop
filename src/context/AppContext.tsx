@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, useMemo } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import { AppContextProviderProps } from "../interfaces/AppContextProviderProps";
 import { AppContextType } from "../interfaces/AppContextType";
 import { get } from "../api/http";

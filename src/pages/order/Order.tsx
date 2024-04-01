@@ -27,6 +27,10 @@ export default function Order() {
     setActiveTab(tabName);
   };
 
+  const NextPage = () => {
+    navigate('/delivery')
+  }
+
   return (
     <>
       <Container>
@@ -180,7 +184,7 @@ export default function Order() {
               </Box>
             </Box>
             <Box display='flex' width='100%' mt='1rem'>
-              <Btn Title='Order' fontSize='1rem' borderRadius='15px' border='none' bgcolor='C67C4E' color='white' px={45} py={width > 767 ? 3 : 6} />
+              <Btn Title='Order' onClick={NextPage} fontSize='1rem' borderRadius='15px' border='none' bgcolor='C67C4E' color='white' px={45} py={width > 767 ? 3 : 6} />
               </Box>
           </Container>
         </BottomNavigation>
