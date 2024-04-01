@@ -12,8 +12,6 @@
 <h2> Created by </h2>
 <b>Sina Zinsaz</b>
 
-Links =>
-
 <a href='https://www.linkedin.com/in/sina-zinsaz-a71061244/'>
     <img src='https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white' />
 </a>
