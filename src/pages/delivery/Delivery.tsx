@@ -1,9 +1,10 @@
-import { BottomNavigation, Box, Container, Grid, IconButton, Typography } from "@mui/material";
+import { BottomNavigation, Box, Container, Grid, IconButton, Typography, Avatar } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import MyLocationOutlinedIcon from '@mui/icons-material/MyLocationOutlined';
 import { useNavigate } from "react-router-dom";
 import Title from "../../components/Title";
 import Description from "../../components/Description";
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
 export default function Delivery() {
     const navigate = useNavigate();
@@ -56,7 +57,7 @@ export default function Delivery() {
                 <Typography fontSize='12px'><Box component='span' color='#808080'>Delivery to </Box><Box component='span' fontWeight='bold'> Jl. Kpg Sutoyo</Box></Typography>
             </Box>
             {/* done step by step  */}
-            <Grid container spacing={1} display='flex' flexDirection='row' justifyContent='center' alignItems='center' my='0.5rem'>
+            <Grid container spacing={1} display='flex' flexDirection='row' justifyContent='center' alignItems='center' mb='0.6rem'>
                 {[0, 1, 2].map((index) => (
                     <Grid item xs={3} key={index}>
                         <Box component='hr' border='2px solid #36C07E' borderRadius='15px' />
@@ -79,12 +80,21 @@ export default function Delivery() {
                     </Box>
                 </Box>
             </Box>
+            {/* Profile user */}
             {/* user name and phone */}
-            <Box>
-                <Avatar sx={{backgroundColor:'transparent'}} variant="rounded">
-                    <Box component="img" src="https://s6.uupload.ir/files/user_0ek2.jpg"
-                        sx={{width:'3rem' , borderRadius:'10px'}} />
-                </Avatar>
+            <Box mb='1rem' display='flex' justifyContent='space-between' alignItems='center'>
+                <Box display='flex' justifyContent='center' alignItems='center'>
+                    <Avatar sx={{backgroundColor:'transparent' , width:'4rem' , height:'4rem' , mr:'10px'}} variant="rounded">
+                        <Box component="img" src="https://s6.uupload.ir/files/user_0ek2.jpg" borderRadius='15px' />
+                    </Avatar>
+                    <Box>
+                            <Title fontSize={1} title="Johan Hawn" />
+                            <Description fontSize="0.8rem" description="Personal Courier" color="#808080" textAlign="left" />
+                    </Box>
+                </Box>
+                <Box border='1px solid #EAEAEA' display='flex' justifyContent='center' alignItems='center' p='15px' borderRadius='15px' mr='1rem'>
+                        <LocalPhoneIcon style={{color:'#808080'}} />
+                </Box>
             </Box>
           </Container>
         </BottomNavigation>
