@@ -9,6 +9,10 @@
 
 Links =>
 
+<a href='https://www.linkedin.com/in/sina-zinsaz-a71061244/'>
+    <img src="[YOUR_VERCEL_PROJECT_DOMAIN]/[METHOD]?username=[YOUR_LINKEDIN_USERNAME]" />
+</a>
+
 🌝 StackOverFlow address : https://stackoverflow.com/users/20870363/sina-zinsaz <br />
 🌼 GitHub address : https://github.com/SINAZZzz <br />
 💥 dev address : https://dev.to/sinazinsaz <br /> 
