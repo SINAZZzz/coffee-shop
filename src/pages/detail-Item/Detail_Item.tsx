@@ -9,15 +9,18 @@ import { ProductType } from "../../types/ProductType";
 
 export default function Detail_Item() {
   const { products , productId } = useContext(AppContext);
+
+  const id = productId !== undefined ? productId : 0;
+
   if (!products) {
     return <div>Loading...</div>;
   }
 
-  if (productId === undefined || productId >= products.length) {
+  if (id < 0 || id >= products.length) {
     return <div>Product not found.</div>;
   }
 
-  const productCandidate = products[productId];
+  const productCandidate = products[id];
 
   if (typeof productCandidate !== 'object' || productCandidate === null) {
     return <div>Error: Product data is not in the expected format.</div>;

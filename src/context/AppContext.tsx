@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, useMemo } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import { AppContextProviderProps } from "../interfaces/AppContextProviderProps";
 import { AppContextType } from "../interfaces/AppContextType";
 import { get } from "../api/http";
@@ -35,7 +35,7 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => 
     fetchData();
   }, []); 
 
-  const memoizedProductId = useMemo(() => productId, [productId]);
+  // const memoizedProductId = useMemo(() => productId, [productId]);
   
   return (
     <AppContext.Provider
@@ -46,7 +46,7 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => 
         setProducts,
         selectedChip:selectedChip,
         setSelectedChip,
-        productId:memoizedProductId,
+        productId:productId,
         setProductId
       }}
     >

@@ -14,11 +14,12 @@ import Btn from "../../components/Btn";
 import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import useWindowSize from "../../functions/Utility";
+import { useNavigate } from "react-router-dom";
 
 export default function Order() {
-  const [value, setValue] = useState(1);
+  const [value, setValue] = useState(1); 
   const { width } = useWindowSize();
-
+  const navigate = useNavigate();
 
   const [activeTab, setActiveTab] = useState('Deliver');
 
@@ -26,12 +27,16 @@ export default function Order() {
     setActiveTab(tabName);
   };
 
+  const NextPage = () => {
+    navigate('/delivery')
+  }
+
   return (
     <>
       <Container>
         {/* Head */}
         <Box display='flex' alignItems='center'>
-          <IconButton>
+          <IconButton onClick={() => navigate('/detail-Item')}>
             <ArrowBackIosNewIcon fontSize="small" />
           </IconButton>
           <Box fontWeight='bold' fontSize='18px' textAlign='center' width='100%' ml='-2.5rem'>
@@ -179,7 +184,7 @@ export default function Order() {
               </Box>
             </Box>
             <Box display='flex' width='100%' mt='1rem'>
-              <Btn Title='Order' fontSize='1rem' borderRadius='15px' border='none' bgcolor='C67C4E' color='white' px={45} py={width > 767 ? 3 : 6} />
+              <Btn Title='Order' onClick={NextPage} fontSize='1rem' borderRadius='15px' border='none' bgcolor='C67C4E' color='white' px={45} py={width > 767 ? 3 : 6} />
               </Box>
           </Container>
         </BottomNavigation>
