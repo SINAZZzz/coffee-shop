@@ -35,5 +35,3 @@
 <h3> run project </h3>
 
 npm run dev
-
-npm run json-server
