@@ -1,3 +1,8 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/dheereshagrwal/colored-icons@1.7.5/src/app/ci.min.css"
+/>
+
 # Coffee Shop
 
 <b>
@@ -10,7 +15,7 @@
 Links =>
 
 <a href='https://www.linkedin.com/in/sina-zinsaz-a71061244/'>
-    <img src="[YOUR_VERCEL_PROJECT_DOMAIN]/[METHOD]?username=[YOUR_LINKEDIN_USERNAME]" />
+    <i className="ci ci-linkedin ci-2x"></i>
 </a>
 
 🌝 StackOverFlow address : https://stackoverflow.com/users/20870363/sina-zinsaz <br />
