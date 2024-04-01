@@ -15,7 +15,7 @@
 Links =>
 
 <a href='https://www.linkedin.com/in/sina-zinsaz-a71061244/'>
-    <i className="ci ci-linkedin ci-2x"></i>
+    <img src='https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white' />
 </a>
 
 🌝 StackOverFlow address : https://stackoverflow.com/users/20870363/sina-zinsaz <br />
