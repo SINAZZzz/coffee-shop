@@ -11,14 +11,19 @@ export const AppContext = createContext<AppContextType>({
   selectedChip: 0,
   setSelectedChip: () => {} ,
   productId: 0,
-  setProductId: () => {} ,
-}); 
+  setProductId: () => {} , 
+  numOfProduct:1,
+  setNumOfProduct:() => {} ,
+  cash:'',
+});  
 
 const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => {
   const [selectedChip, setSelectedChip] = useState<number | undefined>();
   const [categories, setCategories] = useState<string>();
   const [products, setProducts] = useState<string>();
   const [productId , setProductId] = useState<number>();
+  const [numOfProduct, setNumOfProduct] = useState<number>(1);
+  const [cash, setCash] = useState<string>(''); 
   
   useEffect(() => {
     const fetchData = async () => {
@@ -33,7 +38,11 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => 
     };
 
     fetchData();
-  }, []); 
+
+    const cash = (4.53 * numOfProduct) + 1.0;
+    const roundedCashValue = cash.toFixed(2);
+    setCash(roundedCashValue);
+  }, [numOfProduct]); 
 
   // const memoizedProductId = useMemo(() => productId, [productId]);
   
@@ -47,7 +56,10 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => 
         selectedChip:selectedChip,
         setSelectedChip,
         productId:productId,
-        setProductId
+        setProductId,
+        numOfProduct:numOfProduct,
+        setNumOfProduct,
+        cash:cash
       }}
     >
       {children}
