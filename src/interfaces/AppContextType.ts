@@ -12,4 +12,7 @@ export interface AppContextType {
     setSelectedChip: React.Dispatch<React.SetStateAction<number | undefined>>;
     productId : number | undefined;
     setProductId: React.Dispatch<React.SetStateAction<number | undefined>> ;
-}   
+    numOfProduct: number;
+    setNumOfProduct: React.Dispatch<React.SetStateAction<number>>;
+    cash:string;
+}    

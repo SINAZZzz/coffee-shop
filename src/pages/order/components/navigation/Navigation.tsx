@@ -4,8 +4,11 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import Btn from "../../../../components/Btn";
 import { useNavigate } from "react-router-dom";
 import useWindowSize from "../../../../functions/Utility";
+import { useContext } from "react";
+import { AppContext } from "../../../../context/AppContext";
 
 export default function Navigation() {
+  const {cash} = useContext(AppContext)
     const { width } = useWindowSize();
     const navigate = useNavigate();
     
@@ -39,7 +42,7 @@ export default function Navigation() {
         <LocalAtmIcon fontSize="small" style={{color:'#C67C4E' , marginRight:'0.5rem'}} />
         <Box display='flex' justifyContent='center' alignItems='center' bgcolor='#F6F6F6' borderRadius='15px'>
             <Typography color='white' px='6px' py='1.5px' mr='0.5rem' fontSize='12px' borderRadius='15px' bgcolor='#C67C4E'>Cash</Typography>
-            <Typography color='#2F2D2C' pr='0.5rem' fontSize='12px'>$ 5.53</Typography>
+            <Typography color='#2F2D2C' pr='0.5rem' fontSize='12px'>$ {cash}</Typography>
         </Box>
       </Box>
       <Box display='flex' justifyContent='center' alignItems='center' bgcolor='#808080' borderRadius='50%' width="1.3rem" height='1.3rem'>

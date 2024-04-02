@@ -3,10 +3,11 @@ import Title from '../../../../components/Title'
 import Description from '../../../../components/Description'
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
-import { useState } from 'react';
+import { useContext } from 'react';
+import { AppContext } from '../../../../context/AppContext';
 
-export default function NumOfProductOrder() {
-  const [value, setValue] = useState(1); 
+export default function NumOfProductOrder() { 
+  const {setNumOfProduct , numOfProduct } = useContext(AppContext)
   return (
     <Box display='flex' justifyContent='space-between'>
                   <Box display='flex'>
@@ -17,11 +18,11 @@ export default function NumOfProductOrder() {
                       </Box>
                   </Box>
                   <Box display='flex' justifyContent='center' alignItems='center'>
-                    <IconButton onClick={() => setValue(value - 1)}  sx={{border:'1px solid #EAEAEA', width:"1.7rem" , height:'1.7rem' }} disabled={value === 1}>
+                    <IconButton onClick={() => setNumOfProduct(numOfProduct - 1)}  sx={{border:'1px solid #EAEAEA', width:"1.7rem" , height:'1.7rem' }} disabled={numOfProduct === 1}>
                       <RemoveIcon fontSize="small" style={{color:"black"}} />
                     </IconButton>
-                    <Typography color='black' fontWeight='bold' mx='1rem'>{value}</Typography>
-                    <IconButton onClick={() => setValue(value + 1)} sx={{border:'1px solid #EAEAEA', width:"1.7rem" , height:'1.7rem' }}>
+                    <Typography color='black' fontWeight='bold' mx='1rem'>{numOfProduct}</Typography>
+                    <IconButton onClick={() => setNumOfProduct(numOfProduct + 1)} sx={{border:'1px solid #EAEAEA', width:"1.7rem" , height:'1.7rem' }}>
                       <AddIcon fontSize="small" style={{color:"black"}} />
                     </IconButton>
                   </Box>
