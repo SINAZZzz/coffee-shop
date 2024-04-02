@@ -12,7 +12,7 @@ function App() {
   const { width } = useWindowSize();
   return (
     <>
-      {width < 427 ? (
+      {width < 431 ? (
         <AppContextProvider>
           <Routes>
             <Route path='' index element={<Intro />}/>
