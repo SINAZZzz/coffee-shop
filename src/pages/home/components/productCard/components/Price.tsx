@@ -4,7 +4,7 @@ import { priceType } from '../../../../../types/priceType';
 import useWindowSize from "../../../../../functions/Utility";
 
 
-export default function Price({price} : priceType) {
+export default function Price({price , onClick} : priceType) {
   const { width } = useWindowSize();
 
   return (
@@ -21,11 +21,12 @@ export default function Price({price} : priceType) {
               border: 'none',
               display: 'flex',
               justifyContent: 'center',
-              alignItems: 'center'
+              alignItems: 'center',
              }}
+             onClick={onClick}
              >
                 <AddIcon />
         </Box>
     </Box>
   )
-}
+} 

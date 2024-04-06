@@ -10,14 +10,13 @@ import { CardProductProps } from "../../../../../interfaces/CardProductProps";
 
 export default function CardProduct({ price, description, title, image, rank , onClick  }: CardProductProps) {
   return (
-    <Card sx={{ width: '100%' ,  display: 'flex', flexDirection: 'column', borderRadius: '20px', my: '0.5rem' }}
-     onClick={onClick}>
+    <Card sx={{ width: '100%' ,  display: 'flex', flexDirection: 'column', borderRadius: '20px', my: '0.5rem' }}>
       <Rank rank={rank} />
       <ImageProduct image={image} />
       <Box mx='1rem'>
         <Title title={title} />
         <Description description={description} />
-        <Price price={price} />
+        <Price price={price} onClick={onClick} />
       </Box>
     </Card> 
   )

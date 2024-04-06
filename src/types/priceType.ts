@@ -1,4 +1,5 @@
 export type priceType = {
-    price:number;
+    price:number; 
+    onClick:() => void ;
   }
   
