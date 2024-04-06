@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function ProductCard() {
   const navigate = useNavigate();
-  const { products, selectedChip  , setProductId} = useContext(AppContext);
+  const { products, selectedChip} = useContext(AppContext);
   
   if (!Array.isArray(products)) {
     return null; 
@@ -18,7 +18,7 @@ export default function ProductCard() {
     : products;
  
     const nextPage = () =>{
-      setProductId(0);
+      // setProductId(0);
       navigate('/detail-Item')
     }
     
