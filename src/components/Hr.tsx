@@ -1,10 +1,23 @@
 import { Box } from "@mui/material";
-import { HrProps } from "../interfaces/HrProps";
+import { HrProps } from "../interfaces/Props";
 
-
-
-export default function Hr({my , color ,bgcolor , height , border , borderRadius} : HrProps) {
+export default function Hr({
+  my,
+  color,
+  bgcolor,
+  height,
+  border,
+  borderRadius,
+}: HrProps) {
   return (
-    <Box component='hr' my={my} color={color} bgcolor={bgcolor} height={height} border={border} borderRadius={borderRadius} />
-  )
+    <Box
+      component="hr"
+      my={my}
+      color={color}
+      bgcolor={bgcolor}
+      height={height}
+      border={border}
+      borderRadius={borderRadius}
+    />
+  );
 }
